@@ -1,0 +1,70 @@
+<!-- =========================================== -->
+<!--                TOP NAVIGATION               -->
+<!-- =========================================== -->
+<header class="top-nav">
+    <div class="logo">
+        <img src="/MIATA_LOGO1.png" width="100">
+    </div>
+
+    <!-- Mobile Hamburger (MOBILE ONLY) -->
+    <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+
+    <nav class="menu">
+        <div class="dropdown">
+            <a href="/study" class="dropbtn">Study ▾</a>
+            <div class="dropdown-content">
+                <a href="/undergraduate">Undergraduate</a>
+                <a href="/postgraduate">Postgraduate</a>
+                <a href="/online-courses">Online Courses</a>
+                <a href="/short-courses">Short Courses</a>
+            </div>
+        </div>
+
+        <a href="/student-services">Student Services</a>
+        <a href="/research">Research & Innovation</a>
+        <a href="/faculties">Our Faculties</a>
+        <a href="/about">About</a>
+    </nav>
+
+    <div class="right-links">
+        <a href="/login">Login</a>
+        <a href="#">🔍</a>
+        <div class="currency-selector">
+            <span id="currency-btn" onclick="toggleDropdown()" style="font-size: 28px; cursor:pointer;">
+                🌍
+            </span>
+            <img id="selected-flag" style="width:28px; height:20px; margin-left:6px; display:none;">
+        </div>
+
+        <ul id="countryDropdown" class="dropdown-list" style="display:none;">
+            <li onclick="changeCurrency('GBP','gb')">United Kingdom</li>
+            <li onclick="changeCurrency('INR','in')">India</li>
+            <li onclick="changeCurrency('USD','us')">United States</li>
+            <li onclick="changeCurrency('AUD','au')">Australia</li>
+            <li onclick="changeCurrency('CAD','ca')">Canada</li>
+        </ul>
+    </div>
+</header>
+
+<!-- MOBILE MENU PANEL -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="/study">Study</a>
+    <a href="/student-services">Student Services</a>
+    <a href="/research">Research & Innovation</a>
+    <a href="/faculties">Our Faculties</a>
+    <a href="/about">About</a>
+
+    <hr>
+
+    <a href="/subjects">Subject areas</a>
+    <a href="/courses">Courses A-Z</a>
+    <a href="/apply">How to apply</a>
+    <a href="/fees">Fees & Funding</a>
+    <a href="/international">International</a>
+    <a href="/experience">Student experience</a>
+    <a href="/events">Postgraduate events</a>
+    <a href="/offer-holders">Offer holders</a>
+    <a href="/contact">Contact us</a>
+</div>
+
+<script src="/js/script.js" defer></script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professor Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ font-family:'Poppins',sans-serif; background:#f4f6fb; color:#1b2a4e; }
+.dashboard-container{ display:flex; min-height:100vh; }
+.sidebar{ width:250px; background:linear-gradient(180deg,#1d2671,#131842); padding:40px 25px; color:white; }
+.sidebar h3{ font-size:18px; margin-bottom:40px; font-weight:600; }
+.sidebar a{ display:block; padding:12px 15px; margin-bottom:12px; text-decoration:none; color:white; border-radius:10px; font-weight:500; transition:0.3s; opacity:0.9; }
+.sidebar a:hover{ background:rgba(255,255,255,0.15); }
+.main-content{ flex:1; padding:50px; }
+.top-bar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; }
+.top-bar h2{ font-size:24px; font-weight:600; }
+.logout-btn{ background:#1d2671; color:white; padding:8px 20px; border-radius:20px; text-decoration:none; font-size:14px; }
+.logout-btn:hover{ background:#131842; }
+.cards-container{ display:flex; flex-direction:column; gap:25px; }
+.info-card{ width:100%; background:white; padding:30px; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,0.06); display:flex; align-items:center; justify-content:space-between; transition:0.3s; }
+.info-card:hover{ transform:translateY(-4px); }
+.card-left{ display:flex; align-items:center; gap:20px; }
+.card-icon{ width:60px; height:60px; background:linear-gradient(135deg,#1d2671,#131842); color:white; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:24px; }
+.card-text h4{ font-size:18px; margin-bottom:6px; }
+.card-text p{ font-size:14px; color:#777; }
+.card-btn{ background:#1d2671; color:white; padding:10px 18px; border-radius:20px; text-decoration:none; font-size:14px; transition:0.3s; }
+.card-btn:hover{ background:#131842; }
+.role-tag{ background:#e8eaf6; color:#1d2671; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:600; }
+@media(max-width:768px){
+  .dashboard-container{ flex-direction:column; }
+  .sidebar{ width:100%; padding:20px; }
+  .main-content{ padding:20px; }
+  .info-card{ flex-direction:column; align-items:flex-start; gap:15px; }
+}
+</style>
+</head>
+<body>
+<div class="dashboard-container">
+  <div class="sidebar">
+    <h3><i class="fas fa-chalkboard-teacher"></i> Professor Portal</h3>
+    <a href="/dashboard/professor"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-book"></i> Manage Content</a>
+    <a href="#"><i class="fas fa-users"></i> View Students</a>
+    <a href="#"><i class="fas fa-tasks"></i> Assessments</a>
+    <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+  <div class="main-content">
+    <div class="top-bar">
+      <div>
+        <h2>Welcome, <%= user.username %> 👋</h2>
+        <span class="role-tag">👨‍🏫 Professor</span>
+      </div>
+      <a href="/logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+    <div class="cards-container">
+      <div class="info-card">
+        <div class="card-left">
+          <div class="card-icon"><i class="fas fa-book"></i></div>
+          <div class="card-text">
+            <h4>Manage Course Content</h4>
+            <p>Add, edit, or remove course materials and chapters.</p>
+          </div>
+        </div>
+        <a href="#" class="card-btn">Manage</a>
+      </div>
+      <div class="info-card">
+        <div class="card-left">
+          <div class="card-icon"><i class="fas fa-users"></i></div>
+          <div class="card-text">
+            <h4>View Students</h4>
+            <p>Monitor student progress and performance.</p>
+          </div>
+        </div>
+        <a href="#" class="card-btn">View</a>
+      </div>
+      <div class="info-card">
+        <div class="card-left">
+          <div class="card-icon"><i class="fas fa-tasks"></i></div>
+          <div class="card-text">
+            <h4>Assessments</h4>
+            <p>Create and manage quizzes and assessments.</p>
+          </div>
+        </div>
+        <a href="#" class="card-btn">Manage</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

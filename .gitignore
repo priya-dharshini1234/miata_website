@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+public/images/
+public/video/
+public/docs/
