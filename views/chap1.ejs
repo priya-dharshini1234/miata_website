@@ -239,7 +239,7 @@ cursor:pointer;
   <div class="video-modal-content">
     <span class="close-video" onclick="closeVideo()"><i class="fa fa-times"></i></span>
     <video id="chapterVideo" controls controlslist="nodownload noplaybackrate">
-      <source src="/video/chap1.mp4" type="video/mp4">
+      <source src="https://res.cloudinary.com/deipaehin/video/upload/v1773231107/chap1_fpkayl.mp4" type="video/mp4">
     </video>
   </div>
 </div>
@@ -248,7 +248,23 @@ cursor:pointer;
 <div class="video-modal" id="pdfModal">
   <div class="video-modal-content">
     <span class="close-video" onclick="closePDF()"><i class="fa fa-times"></i></span>
-    <iframe src="/docs/chap1.pdf"></iframe>
+    <div style="position:relative; width:100%; height:550px;">
+      <iframe
+        src="https://res.cloudinary.com/deipaehin/raw/upload/v1773230922/chap1_rcbjpc.pdf#toolbar=0&navpanes=0&scrollbar=1"
+        style="width:100%; height:550px; border-radius:12px; background:white; border:none;"
+      ></iframe>
+      <!-- Transparent overlay blocks right-click / save -->
+      <div
+        oncontextmenu="return false;"
+        style="
+          position:absolute;
+          top:0; left:0;
+          width:100%; height:100%;
+          z-index:10;
+          background:transparent;
+        "
+      ></div>
+    </div>
   </div>
 </div>
 
